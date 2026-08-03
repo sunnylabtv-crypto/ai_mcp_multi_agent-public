@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" font-family="'Segoe UI', 'Noto Sans KR', sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#888"/>
+    </marker>
+    <marker id="arrDown" markerWidth="7" markerHeight="7" refX="3.5" refY="6" orient="auto">
+      <polygon points="0 0, 7 0, 3.5 7" fill="#999"/>
+    </marker>
+  </defs>
+
+  <rect width="680" height="480" fill="#FAFAFA" rx="6"/>
+
+  <!-- ============================================================ -->
+  <!-- 1) Single Agent — AI 1 Layer -->
+  <!-- ============================================================ -->
+  <rect x="10" y="10" width="660" height="95" rx="10" fill="#F7F5F2" stroke="#B0A898" stroke-width="1.5"/>
+
+  <text x="25" y="30" font-size="12" font-weight="900" fill="#5A4A3A">Single Agent (:8000)  —  AI 1 Layer</text>
+
+  <!-- AI Client -->
+  <rect x="30" y="46" width="88" height="38" rx="6" fill="#D4915A" stroke="#B07040" stroke-width="1" filter="url(#shadow)"/>
+  <text x="74" y="62" text-anchor="middle" font-size="8" font-weight="900" fill="#fff">AI Orchestrator</text>
+  <text x="74" y="74" text-anchor="middle" font-size="7" font-weight="600" fill="#FFF3E0">Claude Desktop</text>
+
+  <!-- AI 1 Layer label -->
+  <rect x="30" y="38" width="52" height="12" rx="3" fill="#F5E6CA" stroke="#C8A882" stroke-width="0.8"/>
+  <text x="56" y="47" text-anchor="middle" font-size="6" font-weight="900" fill="#A07848">AI 1 Layer</text>
+
+  <line x1="118" y1="65" x2="170" y2="65" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="144" y="58" text-anchor="middle" font-size="7" font-weight="800" fill="#A07848">AI decides</text>
+
+  <!-- Tools -->
+  <rect x="176" y="48" width="46" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="199" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Gmail</text>
+  <rect x="228" y="48" width="42" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="249" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">CRM</text>
+  <rect x="276" y="48" width="50" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="301" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Calendar</text>
+  <rect x="332" y="48" width="40" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="352" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">RAG</text>
+  <rect x="378" y="48" width="56" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="406" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Helpdesk</text>
+  <rect x="440" y="48" width="36" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="458" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Log</text>
+  <rect x="482" y="48" width="32" height="20" rx="4" fill="#E0DBD5" stroke="#A09890" stroke-width="1"/>
+  <text x="498" y="62" text-anchor="middle" font-size="7" font-weight="800" fill="#888">...</text>
+
+  <text x="176" y="86" font-size="8" font-weight="700" fill="#5A4A3A">AI selects directly from 31 tools</text>
+
+  <!-- ============================================================ -->
+  <!-- Transition 1→2 -->
+  <!-- ============================================================ -->
+  <line x1="340" y1="105" x2="340" y2="130" stroke="#999" stroke-width="1.5" marker-end="url(#arrDown)"/>
+  <rect x="365" y="108" width="260" height="14" rx="4" fill="#EEEAE5" stroke="#C0B8A8" stroke-width="0.8"/>
+  <text x="495" y="118" text-anchor="middle" font-size="7.5" font-weight="800" fill="#7A6A5A">Too many tools → Grouped into specialized Agents</text>
+
+  <!-- ============================================================ -->
+  <!-- 2) Multi Agent — AI 2 Layer -->
+  <!-- ============================================================ -->
+  <rect x="10" y="135" width="660" height="105" rx="10" fill="#F7F5F2" stroke="#B0A898" stroke-width="1.5"/>
+
+  <text x="25" y="155" font-size="12" font-weight="900" fill="#5A4A3A">Multi Agent (:9000)  —  AI 2 Layer</text>
+
+  <!-- AI Client -->
+  <rect x="30" y="171" width="88" height="42" rx="6" fill="#D4915A" stroke="#B07040" stroke-width="1" filter="url(#shadow)"/>
+  <text x="74" y="186" text-anchor="middle" font-size="8" font-weight="900" fill="#fff">Orchestrator AI</text>
+  <text x="74" y="198" text-anchor="middle" font-size="6.5" font-weight="600" fill="#FFF3E0">Claude / GPT /</text>
+  <text x="74" y="208" text-anchor="middle" font-size="6.5" font-weight="600" fill="#FFF3E0">Llama / Gemini</text>
+
+  <!-- AI 1 Layer label -->
+  <rect x="30" y="163" width="52" height="12" rx="3" fill="#F5E6CA" stroke="#C8A882" stroke-width="0.8"/>
+  <text x="56" y="172" text-anchor="middle" font-size="6" font-weight="900" fill="#A07848">AI 1 Layer</text>
+
+  <line x1="118" y1="192" x2="170" y2="192" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="144" y="185" text-anchor="middle" font-size="7" font-weight="800" fill="#A07848">AI decides</text>
+
+  <!-- Agent AI -->
+  <rect x="176" y="171" width="88" height="42" rx="6" fill="#D4915A" stroke="#B07040" stroke-width="1" filter="url(#shadow)"/>
+  <text x="220" y="188" text-anchor="middle" font-size="8" font-weight="900" fill="#fff">Execution AI</text>
+  <text x="220" y="200" text-anchor="middle" font-size="7" font-weight="600" fill="#FFF3E0">(Agent)</text>
+  <text x="220" y="210" text-anchor="middle" font-size="6.5" font-weight="600" fill="#FFF3E0">GPT-4o-mini</text>
+
+  <!-- AI 2 Layer label -->
+  <rect x="176" y="163" width="52" height="12" rx="3" fill="#F5E6CA" stroke="#C8A882" stroke-width="0.8"/>
+  <text x="202" y="172" text-anchor="middle" font-size="6" font-weight="900" fill="#A07848">AI 2 Layer</text>
+
+  <line x1="264" y1="192" x2="316" y2="192" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="290" y="185" text-anchor="middle" font-size="7" font-weight="800" fill="#A07848">AI decides</text>
+
+  <!-- Tools -->
+  <rect x="322" y="178" width="46" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="345" y="192" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Gmail</text>
+  <rect x="374" y="178" width="42" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="395" y="192" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">CRM</text>
+  <rect x="422" y="178" width="50" height="20" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="447" y="192" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Calendar</text>
+  <rect x="478" y="178" width="40" height="20" rx="4" fill="#E0DBD5" stroke="#A09890" stroke-width="1"/>
+  <text x="498" y="192" text-anchor="middle" font-size="7" font-weight="800" fill="#888">...</text>
+
+  <text x="322" y="218" font-size="8" font-weight="700" fill="#5A4A3A">AI decides, then Agent AI decides again — double decision</text>
+
+  <!-- ============================================================ -->
+  <!-- Transition 2→3 -->
+  <!-- ============================================================ -->
+  <line x1="340" y1="240" x2="340" y2="265" stroke="#999" stroke-width="1.5" marker-end="url(#arrDown)"/>
+  <rect x="365" y="243" width="270" height="14" rx="4" fill="#EEEAE5" stroke="#C0B8A8" stroke-width="0.8"/>
+  <text x="500" y="253" text-anchor="middle" font-size="7.5" font-weight="800" fill="#7A6A5A">Widely used approach → Tried developer-designed workflow</text>
+
+  <!-- ============================================================ -->
+  <!-- 3) LangGraph — Developer Manual -->
+  <!-- ============================================================ -->
+  <rect x="10" y="270" width="660" height="115" rx="10" fill="#F7F5F2" stroke="#888" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <text x="25" y="290" font-size="12" font-weight="900" fill="#5A4A3A">LangGraph (:7002 → :8000)  —  Developer designs, AI as "Worker"</text>
+
+  <!-- Developer -->
+  <rect x="30" y="306" width="55" height="38" rx="6" fill="#EDE5D8" stroke="#B0A898" stroke-width="1" filter="url(#shadow)"/>
+  <text x="57" y="322" text-anchor="middle" font-size="8" font-weight="800" fill="#5A4A3A">Developer</text>
+  <text x="57" y="334" text-anchor="middle" font-size="7" font-weight="600" fill="#888">Code</text>
+
+  <line x1="85" y1="325" x2="120" y2="325" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- LangGraph -->
+  <rect x="126" y="302" width="100" height="46" rx="6" fill="#EDE5D8" stroke="#B0A898" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="132" y="296" width="36" height="12" rx="3" fill="#7A6A5A"/>
+  <text x="150" y="305" text-anchor="middle" font-size="6" font-weight="900" fill="#fff">CODE</text>
+  <text x="176" y="322" text-anchor="middle" font-size="9" font-weight="900" fill="#5A4A3A">LangGraph</text>
+  <text x="176" y="335" text-anchor="middle" font-size="7" font-weight="700" fill="#888">Fixed workflow order</text>
+
+  <line x1="226" y1="325" x2="264" y2="325" stroke="#888" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="245" y="318" text-anchor="middle" font-size="7" font-weight="800" fill="#7A6A5A">In order</text>
+
+  <!-- Tools in order -->
+  <rect x="270" y="316" width="44" height="18" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="292" y="329" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Gmail</text>
+  <line x1="314" y1="325" x2="324" y2="325" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="328" y="316" width="52" height="18" rx="4" fill="#D4915A" stroke="#B07040" stroke-width="1"/>
+  <text x="354" y="328" text-anchor="middle" font-size="6.5" font-weight="800" fill="#fff">AI Analyze</text>
+  <line x1="380" y1="325" x2="390" y2="325" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="394" y="316" width="40" height="18" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="414" y="329" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">CRM</text>
+  <line x1="434" y1="325" x2="444" y2="325" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="448" y="316" width="52" height="18" rx="4" fill="#D4915A" stroke="#B07040" stroke-width="1"/>
+  <text x="474" y="328" text-anchor="middle" font-size="6.5" font-weight="800" fill="#fff">AI Generate</text>
+  <line x1="500" y1="325" x2="510" y2="325" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="514" y="316" width="44" height="18" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="536" y="329" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Send</text>
+  <line x1="558" y1="325" x2="568" y2="325" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="572" y="316" width="48" height="18" rx="4" fill="#EDE5D8" stroke="#B0A898" stroke-width="1"/>
+  <text x="596" y="329" text-anchor="middle" font-size="7" font-weight="800" fill="#5A4A3A">Meeting</text>
+  <line x1="620" y1="325" x2="630" y2="325" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="634" y="316" width="24" height="18" rx="4" fill="#E0DBD5" stroke="#A09890" stroke-width="1"/>
+  <text x="646" y="329" text-anchor="middle" font-size="7" font-weight="800" fill="#888">...</text>
+
+  <!-- AI where needed -->
+  <line x1="328" y1="340" x2="500" y2="340" stroke="#D4915A" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="414" y="354" text-anchor="middle" font-size="8" font-weight="900" fill="#B07040">AI only where needed (3 of 9 nodes)</text>
+
+  <text x="270" y="374" font-size="8" font-weight="700" fill="#7A6A5A">Same execution every time → Predictable, Auditable</text>
+
+  <!-- ============================================================ -->
+  <!-- Bottom summary -->
+  <!-- ============================================================ -->
+  <rect x="10" y="400" width="660" height="65" rx="8" fill="#EEEAE5" stroke="#C0B8A8" stroke-width="1"/>
+  <text x="340" y="420" text-anchor="middle" font-size="10" font-weight="900" fill="#5A4A3A">Evolution of Orchestration</text>
+  <text x="340" y="438" text-anchor="middle" font-size="9" font-weight="800" fill="#7A6A5A">Single (AI 1 Layer) → Multi (AI 2 Layer) → LangGraph (Developer Code)</text>
+  <text x="340" y="454" text-anchor="middle" font-size="8" font-weight="700" fill="#aaa">AI decides all → AI decides twice → Developer designs, AI executes only</text>
+</svg>
