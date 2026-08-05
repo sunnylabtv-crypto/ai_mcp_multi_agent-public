@@ -4,7 +4,8 @@ A **multi-domain multi-agent system** served over **MCP (Model Context Protocol)
 
 > Part of the **SunnyLab** build series — the step where the server stops being a flat bag of tools and grows a **team**. Before this, one agent held 15+ tools and the client chained them itself; here an in-server orchestrator owns the delegation across 6 agents of 3–6 tools each, so any client (Claude Desktop, Cursor, ADK web, LangGraph) gets the same multi-agent behavior. Sanitized public showcase — credentials and infrastructure identifiers removed; configure your own `.env`.
 
-![Enterprise Multi-Agent MCP architecture — Claude Desktop as intelligent orchestrator over a cloud-native MCP server hosting 6 specialized agents, with user identification, logging middleware, and dynamic permissions in front of the enterprise resource plane.](assets/multi-agent-architecture.png)
+![Stage 3 of the series — four client setups reaching a multi-agent orchestrator that delegates to six domain agents (Email, CRM, Calendar, CS, Helpdesk, Report), backed by an MCP server on GCP and a RAG vector store.](assets/architecture-hero.png)
+
 
 ## Why two AI layers
 The single-agent server put **31 tools in front of one model** and asked it to pick. That works until it doesn't: selection accuracy degrades as the tool list grows. Grouping the tools into specialized agents adds a second decision layer — the orchestrator picks the *agent*, the agent picks the *tool*.
@@ -43,6 +44,10 @@ MCP client (Claude Desktop / Cursor+GPT / Cursor+Llama / ADK / LangGraph)
   ports:  :9000 MCP core   ·   :9001 log receiver API   ·   :9501 dashboard
 ```
 See [`mcp_server/agents/`](mcp_server/agents/) for the orchestrator and the six specialists, and [`mcp_server/services/`](mcp_server/services/) for the integration layer.
+
+The same architecture with every agent's actual tool list, the RBAC matrix, and the port assignments filled in:
+
+![Enterprise Multi-Agent MCP architecture — Claude Desktop as intelligent orchestrator over a cloud-native MCP server hosting 6 specialized agents, with user identification, logging middleware, and dynamic permissions in front of the enterprise resource plane.](assets/multi-agent-architecture.png)
 
 ## Tech stack
 Python · MCP / FastMCP · OpenAI (`gpt-4o-mini`) · Gmail & Google Calendar · Salesforce (JWT) · ChromaDB (RAG) · Streamlit · Docker / docker-compose · Google Cloud Build · GitHub Actions
